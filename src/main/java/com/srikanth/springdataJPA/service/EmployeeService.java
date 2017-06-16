@@ -23,4 +23,12 @@ public class EmployeeService {
 	public void addEmployee(Employee emp){
 		employeeRepo.save(emp);
 	}
+	
+	public Employee getEmployee(String empId){
+		return employeeRepo.findOne(empId);
+	}
+	
+	public List<Employee> getAllEmployeesInDepartment(String deptId){
+		return employeeRepo.findByDeptId(deptId);
+	}
 }

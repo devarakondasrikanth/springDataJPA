@@ -30,4 +30,9 @@ public class EmployeeController {
 		emp.setDep(new Department(departmentid,""));
 		employeeService.addEmployee(emp);
 	}
+	
+	@RequestMapping(value="/department/{departmentid}/employees")
+	public List<Employee> getEmployeesByDepartmentID(@PathVariable String departmentid){
+		return employeeService.getAllEmployeesInDepartment(departmentid);
+	}
 }

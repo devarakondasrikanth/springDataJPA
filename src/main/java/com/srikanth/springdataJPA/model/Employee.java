@@ -12,14 +12,14 @@ public class Employee {
 	private String emailId;
 	private String mobileNumber;	
 	@ManyToOne
-	private Department dep;	
+	private Department dept;	
 	
 	public Employee(String id, String name, String emailId, String mobileNumber,String depId) {
 		this.id = id;
 		this.name = name;
 		this.emailId = emailId;
 		this.mobileNumber = mobileNumber;
-		this.dep = new Department("depId","");
+		this.dept = new Department("depId","");
 	}
 	public Employee() {
 	
@@ -50,10 +50,10 @@ public class Employee {
 	}
 	
 	public Department getDep() {
-		return dep;
+		return dept;
 	}
 	public void setDep(Department dep) {
-		this.dep = dep;
+		this.dept = dep;
 	}
 	
 	@Override
