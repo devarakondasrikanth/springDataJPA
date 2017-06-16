@@ -1,4 +1,4 @@
-package com.srikanth.springdataJPA.main;
+package com.srikanth.springdataJPA.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

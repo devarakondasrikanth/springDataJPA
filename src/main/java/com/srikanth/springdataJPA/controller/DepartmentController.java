@@ -1,4 +1,4 @@
-package com.srikanth.springdataJPA.main;
+package com.srikanth.springdataJPA.controller;
 
 import java.util.List;
 
@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.srikanth.springdataJPA.model.Department;
+import com.srikanth.springdataJPA.service.DepartmentService;
 @RestController
 public class DepartmentController {
 	

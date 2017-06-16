@@ -1,10 +1,13 @@
-package com.srikanth.springdataJPA.main;
+package com.srikanth.springdataJPA.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.srikanth.springdataJPA.model.Department;
+import com.srikanth.springdataJPA.repo.DepartmentRepository;
 @Service
 public class DepartmentService {
 	
