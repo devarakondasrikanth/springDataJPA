@@ -1,13 +1,11 @@
-package com.srikanth.springdataJPA.services;
+package com.srikanth.springdataJPA.main;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.srikanth.springdataJPA.pojo.Employee;
-import com.srikanth.springdataJPA.repo.EmployeeRepository;
-
+import org.springframework.stereotype.Service;
+@Service
 public class EmployeeService {
 	
 	@Autowired
@@ -18,5 +16,8 @@ public class EmployeeService {
 		employeeRepo.findAll().forEach(employeelist::add);
 		return employeelist;
 	}
-
+	
+	public void addEmployee(Employee emp){
+		employeeRepo.save(emp);
+	}
 }

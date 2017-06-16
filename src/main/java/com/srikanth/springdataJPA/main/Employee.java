@@ -1,22 +1,29 @@
-package com.srikanth.springdataJPA.pojo;
+package com.srikanth.springdataJPA.main;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Employee {
-	@Id
+	@Id	
 	private String id;
 	private String name;
 	private String emailId;
-	private Long mobileNumber;	
+	private String mobileNumber;	
+	@ManyToOne
+	private Department dep;	
 	
-	public Employee(String id, String name, String emailId, Long mobileNumber) {
-		super();
+	public Employee(String id, String name, String emailId, String mobileNumber,String depId) {
 		this.id = id;
 		this.name = name;
 		this.emailId = emailId;
 		this.mobileNumber = mobileNumber;
+		this.dep = new Department("depId","");
+	}
+	public Employee() {
+	
 	}
 	public String getId() {
 		return id;
@@ -36,11 +43,18 @@ public class Employee {
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	public Long getMobileNumber() {
+	public String getMobileNumber() {
 		return mobileNumber;
 	}
-	public void setMobileNumber(Long mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
+	}
+	
+	public Department getDep() {
+		return dep;
+	}
+	public void setDep(Department dep) {
+		this.dep = dep;
 	}
 	
 	@Override
