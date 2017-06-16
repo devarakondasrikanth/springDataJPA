@@ -2,7 +2,7 @@ package com.srikanth.springdataJPA.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
 
 @Entity
 public class Department {
