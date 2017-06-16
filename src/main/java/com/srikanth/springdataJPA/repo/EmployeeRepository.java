@@ -11,5 +11,5 @@ public interface EmployeeRepository extends CrudRepository<Employee,String>{
 		
 		public List<Employee> findByDeptId(String depId);
 		
-		
+		public List<Employee> findByMobileNumber(String mobileNumber);
 }

@@ -35,4 +35,9 @@ public class EmployeeController {
 	public List<Employee> getEmployeesByDepartmentID(@PathVariable String departmentid){
 		return employeeService.getAllEmployeesInDepartment(departmentid);
 	}
+	
+	@RequestMapping(value="/employees/{mobileNumber}")
+	public List<Employee> getEmployeesByMobileNumber(@PathVariable String mobileNumber){
+		return employeeService.getAllEmpoyeesByMobileNumber(mobileNumber);
+	}
 }

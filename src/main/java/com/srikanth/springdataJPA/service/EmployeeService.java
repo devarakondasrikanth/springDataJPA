@@ -31,4 +31,8 @@ public class EmployeeService {
 	public List<Employee> getAllEmployeesInDepartment(String deptId){
 		return employeeRepo.findByDeptId(deptId);
 	}
+	
+	public List<Employee> getAllEmpoyeesByMobileNumber(String mobileNumber){
+		return employeeRepo.findByMobileNumber(mobileNumber);
+	}
 }
