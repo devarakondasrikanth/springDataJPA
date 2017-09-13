@@ -11,7 +11,7 @@ public class SpringDataJPA {
 	public static void main(String[] args) {
 
 		SpringApplication.run(SpringDataJPA.class, args);
-
+		
 	}
 
 }
